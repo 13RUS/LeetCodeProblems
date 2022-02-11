@@ -3,24 +3,6 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        DVD[] dvdCollection = new DVD[15];
-        System.out.println("O'la");
-
-        DVD avengersDVD = new DVD("The Avengers", 2012, "Joss Whedon");
-        DVD incrediblesDVD = new DVD("The Incredibles", 2004, "Brad Bird");
-        DVD findingDoryDVD = new DVD("Finding Dory", 2016, "Andrew Stanton");
-        DVD lionKingDVD = new DVD("The Lion King", 2019, "Jon Favreau");
-        DVD starWarsDVD = new DVD("Star Wars", 1977, "George Lucas");
-
-        dvdCollection[7] = avengersDVD;
-        // Put "The Incredibles" into the 4th place: index 3.
-        dvdCollection[3] = incrediblesDVD;
-        // Put "Finding Dory" into the 10th place: index 9.
-        dvdCollection[9] = findingDoryDVD;
-        // Put "The Lion King" into the 3rd place: index 2.
-        dvdCollection[2] = lionKingDVD;
-        dvdCollection[3] = starWarsDVD;
 
         int [] nums = {1,1,0,1,1,1};
         Solution solution = new Solution();
