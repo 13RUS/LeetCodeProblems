@@ -15,8 +15,6 @@ public class SolutionMaxConsecutiveOnes2 {
                     i = j;
                 }
 
-                System.out.println(i);
-
                 for (; i < nums.length; i++) {
                     if (nums[i] == 0) {break;}
                     num++;
@@ -28,6 +26,31 @@ public class SolutionMaxConsecutiveOnes2 {
 
         }
         if (globalNum == 0) {globalNum=nums.length;};
+
+        return globalNum;
+    }
+
+    public int findMaxConsecutiveOnes2(int[] nums) {
+        int globalNum = 0;
+        int left = 0, right = 0;
+        int numZeroes = 0;
+
+        while (right < nums.length){
+            if (nums[right] == 0){
+                numZeroes++;
+            }
+
+            while (numZeroes == 2){
+                if (nums[left] == 0){
+                    numZeroes--;
+                }
+                left++;
+            }
+
+
+            globalNum = Math.max(globalNum, right-left+1);
+            right++;
+        }
 
         return globalNum;
     }
